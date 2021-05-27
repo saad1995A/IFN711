@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Codes</title>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="homepage.css">
+    <style>
+        img{
+            width: 100%;
+        }
+        div img{
+            width: 50%;
+        }
+    </style>
+    <script src="qrcode.js"></script>
+</head>
+<body>
+	<div class="header w">
+	    <div class="nav">
+	        <ul>
+	            <li><a href="homepage.html">Home</a></li>
+	            <li><a href="#">About</a></li>
+	            <li><a href="#">Features</a></li>
+	        </ul>
+	    </div>
+	
+	    <div class="search">
+	        <input type="text" value="Please type key words...">
+	        <button></button>
+	    </div>
+	
+	    <div class="user">
+	        
+	        Staff-Jieheng Liu-n10426477
+	    </div>
+	</div>
+    <main>
+       <!-- using
+       https://davidshimjs.github.io/qrcodejs/
+       -->
+        <div id="output"></div>
+		<div style="text-align: center; width: 500px;height:200px; display: table;border: green solid 1px;">
+		   <span style="display: table-cell; vertical-align: middle; ">
+             <img src="qrcode-encoding.png" style="display: inline-block;" />
+		   </span>
+    </main>    
+    <script>
+        let qrcode = new QRCode("output", {
+            text: "Userid: 01",
+            width: 50,
+            height: 50,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+        
+        document.body.addEventListener('click', ()=>{
+            qrcode.clear(); 
+            qrcode.makeCode("employee 1"); 
+        })
+        
+    </script>
+	<div class="footer">
+	        <div class="w">
+	            <div class="copyright">
+	                <img src="logo.png" alt="">
+	                <p>We aim to provide convenience for company regulation, protecting staff against Covid-19. </p>
+	                <a href="#" class="app">Download App</a>
+	            </div>
+	            <div class="links">
+	                <dl>
+	                    <dt>About us</dt>
+	                    <dd><a href="#">About</a></dd>
+	                    <dd><a href="#">Our team</a></dd>
+	                    <dd><a href="#">Opportunities</a></dd>
+	                    <dd><a href="#">Staff services</a></dd>
+	                    <dd><a href="#">Help</a></dd>
+	                </dl>
+	                <dl>
+	                    <dt>About us</dt>
+	                    <dd><a href="#">About</a></dd>
+	                    <dd><a href="#">Our team</a></dd>
+	                    <dd><a href="#">Opportunities</a></dd>
+	                    <dd><a href="#">Staff services</a></dd>
+	                    <dd><a href="#">Help</a></dd>
+	                </dl>
+	                <dl>
+	                    <dt>About us</dt>
+	                    <dd><a href="#">About</a></dd>
+	                    <dd><a href="#">Our team</a></dd>
+	                    <dd><a href="#">Opportunities</a></dd>
+	                    <dd><a href="#">Staff services</a></dd>
+	                    <dd><a href="#">Help</a></dd>
+	                </dl>
+	            </div>
+	        </div>
+	    </div>
+	</body>
+	
+	</html>
+</body>
+</html>
