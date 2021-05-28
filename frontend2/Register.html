@@ -21,12 +21,23 @@
         <h5>--Personal details--</h5>
     </center>
     <br>
-    <form action="ljh.php" method="GET" name="Enrol List">
+    <script type="text/javascript">
+        var apiUrl = 'https://xekelcdiyj.execute-api.ap-southeast-2.amazonaws.com/prod';
+        fetch(apiUrl).then(response => {
+          return response.json();
+        }).then(data => {
+          // Work with JSON data here
+          console.log(data);
+        }).catch(err => {
+          // Do something for an error here
+        });
+    </script>
+    <form action="https://xekelcdiyj.execute-api.ap-southeast-2.amazonaws.com/prod" method="GET" name="Enrol List">
         <table align="center" width="600">
             <tr height="20">
                 <!--First line-->
                 <td>
-                    Gender
+                    sexy
                 </td>
 
                 <td>
@@ -41,7 +52,7 @@
             <tr>
                 <!--Second Line-->
                 <td>
-                    Birthday
+                    time
                 </td>
 
                 <td>
@@ -129,7 +140,7 @@
             <tr>
                 <!--Forth Line-->
                 <td>
-                    Health Condition
+                    temperature
                 </td>
 
                 <td colspan="3">
@@ -147,7 +158,7 @@
             <tr>
                 <!--Fifth Line-->
                 <td>
-                    Staff name
+                    name
                 </td>
 
                 <td colspan="3">
@@ -158,7 +169,7 @@
             <tr>
                 <!--Sixth Line-->
                 <td>
-                    Staff number
+                    work_id
                 </td>
 
                 <td colspan="3">
